@@ -28,7 +28,11 @@ endif()
 
 else()
 
+FILE(GLOB_RECURSE headers include/*.h include/*.hpp)
+
 idf_component_register(
+    SRCS
+        ${headers}
     INCLUDE_DIRS
         include
     REQUIRES
